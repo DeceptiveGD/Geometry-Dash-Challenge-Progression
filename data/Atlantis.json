@@ -1,0 +1,17 @@
+{
+    "id": 116754090,
+    "name": "Atlantis",
+    "author": "Miksutic",
+    "creators": ["Miksutic"],
+    "verifier": "Miksutic",
+    "verification": "https://www.youtube.com/watch?v=iy_Enl_4jAM",
+    "percentToQualify": 100,
+    "password": "free",
+    "records": [
+        {
+            "user": "NatNat",
+            "hz": 240,
+            "percent": 100
+        }
+    ]
+}
