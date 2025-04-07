@@ -1,0 +1,17 @@
+{
+    "id": 115870264,
+    "name": "Timespace",
+    "author": "Blurmbog",
+    "creators": ["Blurmbog"],
+    "verifier": "Blurmbog",
+    "verification": "https://youtu.be/4B3pcfLg4QE",
+    "percentToQualify": 100,
+    "password": "free",
+    "records": [
+        {
+            "user": "NatNat",
+            "hz": 360,
+            "percent": 100
+        }
+    ]
+}
