@@ -1,0 +1,17 @@
+{
+    "id": 115808850,
+    "name": "Monitoring",
+    "author": "5kv",
+    "creators": ["5kv"],
+    "verifier": "5kv",
+    "verification": "https://youtu.be/4EsrGVqrYbU",
+    "percentToQualify": 100,
+    "password": "free",
+    "records": [
+        {
+            "user": "NatNat",
+            "hz": 360,
+            "percent": 100
+        }
+    ]
+}
