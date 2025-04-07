@@ -1,0 +1,17 @@
+{
+    "id": 115870264,
+    "name": "Tee ESSAYY",
+    "author": "Potato",
+    "creators": ["Potato"],
+    "verifier": "Potato",
+    "verification": "https://www.youtube.com/watch?v=7VzxjRlxRLs",
+    "percentToQualify": 100,
+    "password": "free",
+    "records": [
+        {
+            "user": "NatNat",
+            "hz": 360,
+            "percent": 100
+        }
+    ]
+}
