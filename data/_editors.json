@@ -48,9 +48,13 @@
         "link": "https://www.youtube.com/@agathxgd"
     },
     {
+        "role": "Helper",
+        "name": "Voiddle",
+        "accountID": 19326869
+    },
+    {
         "role": "dev",
         "name": "Deceptive",
         "accountID": 19113859
     }
-    
 ]
