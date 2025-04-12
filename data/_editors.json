@@ -50,11 +50,21 @@
     {
         "role": "helper",
         "name": "Voiddle",
-        "accountID": 19326869
+        "accountID": 19326869,
+    },
+    {
+        "role": "dev",
+        "name": "Zilko",
+        "accountID": 10300913,
+    },
+    {
+        "role": "dev",
+        "name": "OmgRod",
+        "accountID": 17369066,
     },
     {
         "role": "dev",
         "name": "Deceptive",
-        "accountID": 19113859
+        "accountID": 19113859,
     }
 ]
