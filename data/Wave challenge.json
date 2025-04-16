@@ -59,7 +59,12 @@
             "user": "EABH",
             "hz": 240,
             "percent": 100
+        },
+        {
+            "user": "mmommo12304",
+            "hz": 120,
+            "percent": 100,
+            "mobile": true
         }
-       
     ]
 }
