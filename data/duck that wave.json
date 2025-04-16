@@ -1,0 +1,17 @@
+{
+    "id": 111560065,
+    "name": "duck that wave",
+    "author": "raver",
+    "creators": ["raver"],
+    "verifier": "raver",
+    "verification": "https://youtu.be/N2V_qYNqizQ?si=RSehKb7k3qONzQy7",
+    "percentToQualify": 100,
+    "password": "free",
+    "records": [
+        {
+            "user": "NatNat",
+            "hz": 360,
+            "percent": 100
+        }
+    ]
+}
