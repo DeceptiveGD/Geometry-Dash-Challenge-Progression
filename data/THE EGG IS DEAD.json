@@ -39,6 +39,11 @@
             "user": "frostytoes",
             "hz": 144,
             "percent": 100
+        },
+        {
+            "user": "SadCraft0o",
+            "hz": 240,
+            "percent": 100
         }
     ]       
 }
