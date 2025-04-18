@@ -45,6 +45,12 @@
             "user": "ImFeelingGreen",
             "hz": 360,
             "percent": 100
+        },
+        {
+            "user": "EABH",
+            "hz": 120,
+            "percent": 100,
+            "video": "https://www.youtube.com/watch?v=bKOX9uoz7Gg"
         }
     ]
 }
