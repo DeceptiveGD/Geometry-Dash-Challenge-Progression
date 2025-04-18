@@ -45,6 +45,11 @@
             "user": "Maxa",
             "hz": 240,
             "percent": 100
+        },
+        {
+            "user": "block of cheese",
+            "hz": 60,
+            "percent": 100
         }
     ]
 }
