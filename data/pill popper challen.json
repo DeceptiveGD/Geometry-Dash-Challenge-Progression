@@ -12,6 +12,11 @@
             "user": "EABH",
             "hz": 120,
             "percent": 100
+        },
+        {
+            "user": "Maxa",
+            "hz": 144,
+            "percent": 100
         }
     ]
 }
