@@ -8,5 +8,10 @@
     "percentToQualify": 100,
     "password": "free",
     "records": [
+        {
+            "user": "Turbometric",
+            "hz": 60,
+            "percent": 100
+        }
     ]
 }
