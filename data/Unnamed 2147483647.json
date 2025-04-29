@@ -12,6 +12,11 @@
             "user": "whippd",
             "hz": 480,
             "percent": 100
+        },
+        {
+            "user": "Potato",
+            "hz": 360,
+            "percent": 100
         }
     ]
 }
