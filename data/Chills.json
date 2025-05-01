@@ -12,6 +12,11 @@
             "user": "Turbometric",
             "hz": 60,
             "percent": 100
+        },
+        {
+            "user": "Potato",
+            "hz": 360,
+            "percent": 100
         }
     ]
 }
