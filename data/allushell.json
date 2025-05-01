@@ -22,6 +22,11 @@
             "user": "Maxa",
             "hz": 144,
             "percent": 100
+        },
+        {
+            "user": "runaia",
+            "hz": 144,
+            "percent": 100
         }
     ]
 }
