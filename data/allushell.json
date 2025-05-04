@@ -27,6 +27,12 @@
             "user": "runaia",
             "hz": 144,
             "percent": 100
+        },
+        {
+            "user": "NatNat",
+            "video": "",
+            "hz": 288,
+            "percent": 100
         }
     ]
 }
