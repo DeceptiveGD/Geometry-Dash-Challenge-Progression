@@ -16,6 +16,11 @@
         "user": "Farlayy",
         "hz": 240,
         "percent": 100
-    }
+    },
+        {
+            "user": "NatNat",
+            "hz": 240,
+            "percent": 100
+        }
 ]
 }
