@@ -1,0 +1,17 @@
+{
+    "id": 118897488,
+    "name": "Xtinct Dance",
+    "author": "ImFeelingGreen",
+    "creators": ["ImFeelingGreen"],
+    "verifier": "ImFeelingGreen",
+    "verification": " https://www.youtube.com/watch?v=41jit0Thspk",
+    "percentToQualify": 100,
+    "password": "free",
+    "records": [
+        {
+            "user": "NatNat",
+            "hz": 240,
+            "percent": 100
+        }
+    ]
+}       
