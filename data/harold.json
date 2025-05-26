@@ -37,6 +37,11 @@
             "user": "whippd",
             "hz": 480,
             "percent": 100
+        },
+        {
+            "user": "venla",
+            "hz": 440,
+            "percent": 100
         }
     ]
 
