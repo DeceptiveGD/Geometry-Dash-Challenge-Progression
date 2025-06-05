@@ -12,6 +12,16 @@
             "user": "NatNat",
             "hz": 240,
             "percent": 100
+        },
+        {
+            "user": "LoB",
+            "hz": 240,
+            "percent": 100
+        },
+        {
+            "user": "zizo",
+            "hz": 240,
+            "percent": 100
         }
     ]
 }       
