@@ -32,6 +32,11 @@
             "user": "Zovori",
             "hz": 240,
             "percent": 100
+        },
+        {
+            "user": "raver",
+            "hz": 60,
+            "percent": 100
         }
     ]
 }
