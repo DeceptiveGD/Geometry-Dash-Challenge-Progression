@@ -17,6 +17,11 @@
             "user": "Pikledoge",
             "hz": 60,
             "percent": 100
+        },
+        {
+            "user": "Inputname",
+            "hz": 360,
+            "percent": 100
         }
     ]
 }
