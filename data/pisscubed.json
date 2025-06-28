@@ -37,6 +37,11 @@
             "user": "raver",
             "hz": 60,
             "percent": 100
+        },
+        {
+            "user": "Hellofriendevan",
+            "hz": 120,
+            "percent": 100
         }
     ]
 }
