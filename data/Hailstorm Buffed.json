@@ -22,6 +22,12 @@
             "user": "jdeen",
             "hz": 240,
             "percent": 100
+        },
+        {
+            "user": "Battram",
+            "hz": 120,
+            "percent": 100,
+            "mobile": true
         }
     ]
 }
