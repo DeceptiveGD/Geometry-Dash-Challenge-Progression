@@ -37,6 +37,11 @@
             "user": "Maxa",
             "hz": 240,
             "percent": 100
+        },
+        {
+            "user": "Hellofriendevan",
+            "hz": 120,
+            "percent": 100
         }
     ]
 }
