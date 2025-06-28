@@ -50,6 +50,11 @@
             "user": "VileBunny",
             "hz": 1000,
             "percent": 100
+        },
+        {
+            "user": "Hellofriendevan",
+            "hz": 120,
+            "percent": 100
         }
     ]
 }
