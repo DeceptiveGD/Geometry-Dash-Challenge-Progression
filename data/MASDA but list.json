@@ -51,6 +51,11 @@
             "hz": 120,
             "percent": 100,
             "video": "https://www.youtube.com/watch?v=bKOX9uoz7Gg"
+        },
+        {
+            "user": "Hellofriendevan",
+            "hz": 120,
+            "percent": 100
         }
     ]
 }

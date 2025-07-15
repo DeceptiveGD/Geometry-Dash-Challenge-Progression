@@ -73,6 +73,11 @@
             "user": "Hellofriendevan",
             "hz": 120,
             "percent": 100
+        },
+        {
+            "user": "Entershift",
+            "hz": 480,
+            "percent": 100
         }
     ]
 }
