@@ -78,6 +78,11 @@
             "user": "Hellofriendevan",
             "hz": 120,
             "percent": 100
+        },
+        {
+            "user": "random",
+            "hz": 720,
+            "percent": 100
         }
     ]
 }
