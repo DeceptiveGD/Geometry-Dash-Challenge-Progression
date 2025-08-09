@@ -83,6 +83,11 @@
             "user": "random",
             "hz": 720,
             "percent": 100
+        },
+         {
+            "user": "BLUJAYOO",
+            "hz": 240,
+            "percent": 100
         }
     ]
 }
