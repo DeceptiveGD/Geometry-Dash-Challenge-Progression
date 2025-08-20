@@ -1,6 +1,6 @@
 {
     "id": 107487063,
-    "name": "NatNat's Hell",
+    "name": "NatNats Hell",
     "author": "runaia",
     "creators": ["runaia"],
     "verifier": "NatNat",
@@ -16,6 +16,11 @@
         },
         {
             "user": "Farlayy",
+            "hz": 240,
+            "percent": 100
+        },
+        {
+            "user": "BLUJAYOO",
             "hz": 240,
             "percent": 100
         }
