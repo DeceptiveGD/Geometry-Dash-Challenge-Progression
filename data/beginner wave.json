@@ -65,6 +65,11 @@
             "user": "SH41N3",
             "hz": 360,
             "percent": 100
+        },
+        {
+            "user": "Sylvia",
+            "hz": 240,
+            "percent": 100    
         }
     ]
 }
