@@ -1,0 +1,22 @@
+{
+    "id": 120822208,
+    "name": "undis silly x",
+    "author": "memoshi",
+    "creators": ["memoshi"],
+    "verifier": "memoshi",
+    "verification": "https://youtu.be/8m0VjWOK0Bg?si=vlXoYURWTPw-1bkq",
+    "percentToQualify": 100,
+    "password": "free",
+    "records": [
+        {
+            "user": "Turbometric",
+            "hz": 144,
+            "percent": 100
+        },
+        {
+            "user": "NatNat",
+            "hz": 240,
+            "percent": 100
+        }
+    ]
+}
