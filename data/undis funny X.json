@@ -1,0 +1,48 @@
+{
+    "id": 107720384,
+    "name": "undis funny X",
+    "author": "memoshi",
+    "creators": ["memoshi"],
+    "verifier": "memoshi",
+    "verification": "https://www.youtube.com/watch?v=aysDBsCieAE",
+    "percentToQualify": 100,
+    "password": "free",
+    "records": [
+        {
+            "user": "KrisYa",
+            "video": "https://www.youtube.com/watch?v=DOqMblbvE_g",
+            "hz": 360,
+            "percent": 100
+        },
+        {
+            "user": "Farlayy",
+            "hz": 240,
+            "percent": 100
+        },
+        {
+            "user": "Tacojed",
+            "hz": 240,
+            "percent": 100
+        },
+        {
+            "user": "Potato",
+            "hz": 360,
+            "percent": 100
+        },
+        {
+            "user": "NatNat",
+            "hz": 360,
+            "percent": 100
+        },
+        {
+            "user": "whippd",
+            "hz": 480,
+            "percent": 100
+        },
+        {
+            "user": "Hellofriendevan",
+            "hz": 120,
+            "percent": 100
+        }
+    ]
+}
