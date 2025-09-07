@@ -1,13 +1,12 @@
 {
     "id": 121645600,
     "name": "Bewdew",
-    "author": "potato",
-    "creators": ["potato"],
-    "verifier": "Allu",
+    "author": "Allu",
+    "creators": ["Allu"],
+    "verifier": "potato",
     "verification": "https://youtu.be/q6S29saVVJE",
     "percentToQualify": 100,
     "password": "free",
     "records": [
-       
     ]
 }
