@@ -48,6 +48,11 @@
             "user": "Entershift",
             "hz": 480,
             "percent": 100
+        },
+        {
+            "user": "VenVren",
+            "hz": 240,
+            "percent": 100
         }
     ]
 }
