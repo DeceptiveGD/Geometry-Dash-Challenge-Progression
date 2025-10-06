@@ -32,6 +32,11 @@
             "user": "jdeen",
             "hz": 240,
             "percent": 100
+        },
+        {
+            "user": "zocet",
+            "hz": 240,
+            "percent": 100
         }
     ]
 }
