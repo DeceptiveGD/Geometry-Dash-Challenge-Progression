@@ -1,0 +1,17 @@
+{
+    "id": 126031194,
+    "name": "flare",
+    "author": "sylvia",
+    "creators": ["sylvia"],
+    "verifier": "sylvia",
+    "verification": "https://www.youtube.com/watch?v=HSTcvwPxwhU",
+    "percentToQualify": 100,
+    "password": "free",
+    "records": [
+        {
+            "user": "Hellofriendevan",
+            "hz": 240,
+            "percent": 100
+        }
+    ]
+}
