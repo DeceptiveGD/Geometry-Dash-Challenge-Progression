@@ -11,6 +11,12 @@
             "user": "Hellofriendevan",
             "hz": 240,
             "percent": 100
+        },
+        {
+            "user": "NatNat",
+            "video": "https://www.youtube.com/watch?v=XzMnRRzUHbs",
+            "hz": 240,
+            "percent": 100
         }
     ]
 }
