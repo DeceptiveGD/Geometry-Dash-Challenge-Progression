@@ -49,6 +49,11 @@
             "user": "Hellofriendevan",
             "hz": 120,
             "percent": 100
+        },
+        {
+            "user": "Ivan",
+            "hz": 120,
+            "percent": 100
         }
     ]
 }
