@@ -1,17 +1,17 @@
 import { round, score } from './score.js';
 
 /**
- 
-Path to directory containing _list.json and all levels*/
+ * Path to directory containing `_list.json` and all levels
+ */
 const dir = '/data';
 
 export async function fetchList() {
-    const listResult = await fetch(${dir}/_list.json);
+    const listResult = await fetch(`${dir}/_list.json`);
     try {
         const list = await listResult.json();
         return await Promise.all(
             list.map(async (path, rank) => {
-                const levelResult = await fetch(${dir}/${path}.json);
+                const levelResult = await fetch(`${dir}/${path}.json`);
                 try {
                     const level = await levelResult.json();
                     return [
@@ -25,20 +25,20 @@ export async function fetchList() {
                         null,
                     ];
                 } catch {
-                    console.error(Failed to load level #${rank + 1} ${path}.);
+                    console.error(`Failed to load level #${rank + 1} ${path}.`);
                     return [null, path];
                 }
             }),
         );
     } catch {
-        console.error(Failed to load list.);
+        console.error(`Failed to load list.`);
         return null;
     }
 }
 
 export async function fetchEditors() {
     try {
-        const editorsResults = await fetch(${dir}/_editors.json);
+        const editorsResults = await fetch(`${dir}/_editors.json`);
         const editors = await editorsResults.json();
         return editors;
     } catch {
@@ -60,7 +60,7 @@ export async function fetchLeaderboard() {
         // Verification
         const verifier = Object.keys(scoreMap).find(
             (u) => u.toLowerCase() === level.verifier.toLowerCase(),
-        )  level.verifier;
+        ) || level.verifier;
         scoreMap[verifier] ??= {
             verified: [],
             completed: [],
@@ -78,7 +78,7 @@ export async function fetchLeaderboard() {
         level.records.forEach((record) => {
             const user = Object.keys(scoreMap).find(
                 (u) => u.toLowerCase() === record.user.toLowerCase(),
-            )  record.user;
+            ) || record.user;
             scoreMap[user] ??= {
                 verified: [],
                 completed: [],
@@ -121,8 +121,4 @@ export async function fetchLeaderboard() {
 
     // Sort by total score
     return [res.sort((a, b) => b.total - a.total), errs];
-
-
-    //pack stuff
-    const dir = '/data';
 }
