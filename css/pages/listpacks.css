@@ -4,7 +4,7 @@
     background-color: var(--color-background-hover);
     height: 65px;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: visible;
     width: 100%;
 }
 
@@ -191,4 +191,5 @@
     text-shadow: 0px 0px 5px rgb(0, 0, 0);
     background-color: #5d5d5d;
     padding: 10px;
+
 }
