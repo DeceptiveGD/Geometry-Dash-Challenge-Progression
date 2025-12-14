@@ -7,6 +7,6 @@ export default [
     { path: '/', component: List },
     { path: '/leaderboard', component: Leaderboard },
     { path: '/roulette', component: Roulette },
-    { path: '/ListPacks', component: Listpacks }
+    { path: '/ListPacks', component: ListPacks }
 ];
 
