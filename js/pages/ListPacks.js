@@ -135,21 +135,24 @@ export default {
     },
 
     async mounted() {
-        try {
-            this.packs = (await fetchPacks()) || [];
-            this.list = (await fetchList()) || [];
+      async mounted() {
+    try {
+        this.packs = await fetchPacks();
+        console.log("Packs data:", this.packs);  // Check if packs data is returned
+        this.list = (await fetchList()) || [];
 
-            if (this.packs.length) {
-                this.loadingPack = true;
-                this.selectedPackLevels = await fetchPackLevels(this.packs[0].name);
-                this.loadingPack = false;
-            }
-        } catch (err) {
-            console.error("Failed to load list packs:", err);
-        } finally {
-            this.loading = false;
+        if (this.packs.length) {
+            this.loadingPack = true;
+            this.selectedPackLevels = await fetchPackLevels(this.packs[0].name);
+            this.loadingPack = false;
         }
-    },
+    } catch (err) {
+        console.error("Failed to load list packs:", err);
+    } finally {
+        this.loading = false;
+    }
+}
+
 
     methods: {
         async switchLevels(i) {
@@ -179,3 +182,4 @@ export default {
         embed,
     },
 };
+
