@@ -135,5 +135,32 @@ export async function fetchPacks() {
         return [];
     }
 }
+    export async function fetchPackLevels(packName) {
+    try {
+        const packs = await fetchPacks();
+        const pack = packs.find(p => p.name === packName);
+        if (!pack) return [];
+
+        // Fetch each level JSON
+        const levels = await Promise.all(
+            pack.levels.map(async lvl => {
+                try {
+                    const res = await fetch(`/data/${lvl.name}.json`);
+                    return await res.json();
+                } catch (err) {
+                    console.error(`Failed to fetch level ${lvl.name}`, err);
+                    return null;
+                }
+            })
+        );
+
+        // Filter out failed levels
+        return levels.filter(lvl => lvl !== null);
+    } catch (err) {
+        console.error("Failed to fetch pack levels", err);
+        return [];
+    }
+}
+
 
 }
