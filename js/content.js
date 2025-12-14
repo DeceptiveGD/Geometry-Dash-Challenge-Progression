@@ -121,4 +121,19 @@ export async function fetchLeaderboard() {
 
     // Sort by total score
     return [res.sort((a, b) => b.total - a.total), errs];
+
+
+    //pack stuff
+    const dir = '/data';
+
+export async function fetchPacks() {
+    try {
+        const res = await fetch(`${dir}/packs.json`);
+        return await res.json(); // this now includes both packs AND levels inside each pack
+    } catch (err) {
+        console.error("Failed to load packs.json", err);
+        return [];
+    }
+}
+
 }
