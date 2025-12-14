@@ -134,11 +134,10 @@ export default {
         },
     },
 
-    async mounted() {
-      async mounted() {
+   async mounted() {
     try {
         this.packs = await fetchPacks();
-        console.log("Packs data:", this.packs);  // Check if packs data is returned
+        console.log("Fetched packs:", this.packs);  // Ensure this logs the correct data
         this.list = (await fetchList()) || [];
 
         if (this.packs.length) {
@@ -182,4 +181,5 @@ export default {
         embed,
     },
 };
+
 
