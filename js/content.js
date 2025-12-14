@@ -121,11 +121,9 @@ export async function fetchLeaderboard() {
 
     // Sort by total score
     return [res.sort((a, b) => b.total - a.total), errs];
+}
 
-
-    //pack stuff
-    const dir = '/data';
-
+// --- EXISTING fetchPacks stays unchanged ---
 export async function fetchPacks() {
     try {
         const res = await fetch(`${dir}/packs.json`);
@@ -135,17 +133,19 @@ export async function fetchPacks() {
         return [];
     }
 }
-    export async function fetchPackLevels(packName) {
+
+// --- NEW: fetchPackLevels function ---
+export async function fetchPackLevels(packName) {
     try {
         const packs = await fetchPacks();
         const pack = packs.find(p => p.name === packName);
         if (!pack) return [];
 
-        // Fetch each level JSON
+        // Fetch each level JSON based on the level names in the pack
         const levels = await Promise.all(
             pack.levels.map(async lvl => {
                 try {
-                    const res = await fetch(`/data/${lvl.name}.json`);
+                    const res = await fetch(`${dir}/${lvl.name}.json`);
                     return await res.json();
                 } catch (err) {
                     console.error(`Failed to fetch level ${lvl.name}`, err);
@@ -154,13 +154,10 @@ export async function fetchPacks() {
             })
         );
 
-        // Filter out failed levels
+        // Return only successfully fetched levels
         return levels.filter(lvl => lvl !== null);
     } catch (err) {
         console.error("Failed to fetch pack levels", err);
         return [];
     }
-}
-
-
 }
