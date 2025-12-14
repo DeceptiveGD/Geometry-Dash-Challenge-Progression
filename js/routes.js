@@ -6,7 +6,6 @@ import ListPacks from './pages/ListPacks.js';
 export default [
     { path: '/', component: List },
     { path: '/leaderboard', component: Leaderboard },
-    { path: '/roulette', component: Roulette },
-    { path: '/listpacks', component: ListPacks }
+    { path: '/roulette', component: Roulette }
 ];
 
