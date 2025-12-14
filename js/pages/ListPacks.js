@@ -1,4 +1,4 @@
-import { fetchPacks, fetchList } from "../content.js"; // Removed fetchPackLevels
+import { fetchPacks, fetchList } from "../content.js";
 import { embed } from "../util.js";
 import { score } from "../score.js";
 
@@ -24,7 +24,7 @@ export default {
                         v-for="(pack, i) in packs"
                         :key="pack.name"
                         @click="switchLevels(i)"
-                        :style="{ background: pack.colour }"
+                        :style="{ background: pack.color }"
                     >
                         <p>{{ pack.name }}</p>
                     </button>
@@ -35,26 +35,20 @@ export default {
             <div class="list-container">
                 <Spinner v-if="loadingPack" />
 
-                <table
-                    v-else-if="selectedPackLevels.length"
-                    class="list"
-                >
+                <table v-else-if="selectedPackLevels.length" class="list">
                     <tr v-for="(level, i) in selectedPackLevels" :key="i">
                         <td class="rank">
                             <p class="type-label-lg">
                                 #{{ getRank(level) }}
                             </p>
                         </td>
-                        <td
-                            class="level"
-                            :class="{ active: selectedLevel === i, error: !level }"
-                        >
+                        <td class="level" :class="{ active: selectedLevel === i, error: !level }">
                             <button
                                 @click="selectedLevel = i"
-                                :style="selectedLevel === i ? { background: pack?.colour } : {}"
+                                :style="selectedLevel === i ? { background: pack?.color } : {}"
                             >
                                 <span class="type-label-lg">
-                                    {{ level?.[0]?.level?.name || 'Invalid Level' }}
+                                    {{ level?.name || 'Invalid Level' }}
                                 </span>
                             </button>
                         </td>
@@ -64,10 +58,7 @@ export default {
 
             <!-- Level Details -->
             <div class="level-container">
-                <div
-                    v-if="activeLevel"
-                    class="level"
-                >
+                <div v-if="activeLevel" class="level">
                     <h1>{{ activeLevel.name }}</h1>
 
                     <LevelAuthors
@@ -96,22 +87,14 @@ export default {
 
                     <h2>Records</h2>
                     <table class="records" v-if="activeLevel.records?.length">
-                        <tr
-                            v-for="(record, i) in activeLevel.records"
-                            :key="i"
-                            class="record"
-                        >
+                        <tr v-for="(record, i) in activeLevel.records" :key="i" class="record">
                             <td class="percent">
                                 <p :style="record.percent === 100 ? 'font-weight:bold' : ''">
                                     {{ record.percent }}%
                                 </p>
                             </td>
                             <td class="user">
-                                <a
-                                    :href="record.link"
-                                    target="_blank"
-                                    class="type-label-lg"
-                                >
+                                <a :href="record.link" target="_blank" class="type-label-lg">
                                     {{ record.user }}
                                 </a>
                             </td>
@@ -147,7 +130,7 @@ export default {
         },
 
         activeLevel() {
-            return this.selectedPackLevels?.[this.selectedLevel]?.[0]?.level || null;
+            return this.selectedPackLevels[this.selectedLevel] || null;
         },
     },
 
@@ -158,9 +141,7 @@ export default {
 
             if (this.packs.length) {
                 this.loadingPack = true;
-                // Map levels into the structure ListPacks.js expects
-                this.selectedPackLevels =
-                    (this.packs[0].levels || []).map(lvl => [ { level: lvl } ]);
+                this.selectedPackLevels = this.packs[0].levels || [];
                 this.loadingPack = false;
             }
         } catch (err) {
@@ -180,9 +161,7 @@ export default {
             this.selectedPackLevels = [];
 
             try {
-                // Map levels for the selected pack
-                this.selectedPackLevels =
-                    (this.packs[i].levels || []).map(lvl => [ { level: lvl } ]);
+                this.selectedPackLevels = this.packs[i].levels || [];
             } catch (err) {
                 console.error("Failed to load pack:", err);
             } finally {
@@ -191,10 +170,8 @@ export default {
         },
 
         getRank(level) {
-            if (!level?.[0]?.level?.name) return '?';
-            const idx = this.list.findIndex(
-                (lvl) => lvl?.[0]?.name === level[0].level.name
-            );
+            if (!level?.name) return '?';
+            const idx = this.list.findIndex(lvl => lvl?.[0]?.name === level.name);
             return idx === -1 ? '?' : idx + 1;
         },
 
@@ -202,5 +179,6 @@ export default {
         embed,
     },
 };
+
 
 
