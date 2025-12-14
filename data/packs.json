@@ -1,0 +1,67 @@
+[
+  {
+    "id": "frosty",
+    "name": "The Frosty Pack",
+    "description": "Challenges made by frostytoes",
+    "color": "#7ccfff",
+    "levels": [
+      { "name": "life is roblox" },
+      { "name": "headset dent" },
+      { "name": "runaiashell" },
+      { "name": "Redux" },
+      { "name": "balls challenge" }
+    ]
+  },
+  {
+    "id": "top1",
+    "name": "Top 1 Pack",
+    "description": "Former or current top 1s",
+    "color": "#ff5c5c",
+    "levels": [
+      { "name": "PREROLLED BLUNTS" },
+      { "name": "Noxious" },
+      { "name": "NA204" },
+      { "name": "Heta Dan" },
+      { "name": "I Whip" },
+      { "name": "11 minutes" },
+      { "name": "Shalvantis Isle" },
+      { "name": "Monument" },
+      { "name": "headset dent" }
+    ]
+  },
+  {
+    "id": "nostalgia",
+    "name": "Nostalgia Pack",
+    "description": "Old challenges",
+    "color": "#ffd966",
+    "levels": [
+      { "name": "headset dent" },
+      { "name": "Solar Seven" },
+      { "name": "S A D E S T" },
+      { "name": "pwi" }
+    ]
+  },
+  {
+    "id": "beginner",
+    "name": "Beginner Pack",
+    "description": "Entry-level challenges for new players. (none of these grant list points lmaoooooo)",
+    "color": "#4cff8f",
+    "levels": [
+      { "name": "Nuts" },
+      { "name": "I really like cheese" },
+      { "name": "and she said" },
+      { "name": "Balls In Wave" }
+    ]
+  },
+  {
+    "id": "allu",
+    "name": "Allu's Terrible Challenges Pack",
+    "description": "Allu wanted this to exist.",
+    "color": "#b36bff",
+    "levels": [
+      { "name": "Mammamia" },
+      { "name": "BEWDEW" },
+      { "name": "hellcat" }
+    ]
+  }
+]
