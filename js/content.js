@@ -1,17 +1,17 @@
 import { round, score } from './score.js';
 
 /**
- * Path to directory containing `_list.json` and all levels
- */
+ 
+Path to directory containing _list.json and all levels*/
 const dir = '/data';
 
 export async function fetchList() {
-    const listResult = await fetch(`${dir}/_list.json`);
+    const listResult = await fetch(${dir}/_list.json);
     try {
         const list = await listResult.json();
         return await Promise.all(
             list.map(async (path, rank) => {
-                const levelResult = await fetch(`${dir}/${path}.json`);
+                const levelResult = await fetch(${dir}/${path}.json);
                 try {
                     const level = await levelResult.json();
                     return [
@@ -25,20 +25,20 @@ export async function fetchList() {
                         null,
                     ];
                 } catch {
-                    console.error(`Failed to load level #${rank + 1} ${path}.`);
+                    console.error(Failed to load level #${rank + 1} ${path}.);
                     return [null, path];
                 }
             }),
         );
     } catch {
-        console.error(`Failed to load list.`);
+        console.error(Failed to load list.);
         return null;
     }
 }
 
 export async function fetchEditors() {
     try {
-        const editorsResults = await fetch(`${dir}/_editors.json`);
+        const editorsResults = await fetch(${dir}/_editors.json);
         const editors = await editorsResults.json();
         return editors;
     } catch {
@@ -60,7 +60,7 @@ export async function fetchLeaderboard() {
         // Verification
         const verifier = Object.keys(scoreMap).find(
             (u) => u.toLowerCase() === level.verifier.toLowerCase(),
-        ) || level.verifier;
+        )  level.verifier;
         scoreMap[verifier] ??= {
             verified: [],
             completed: [],
@@ -78,7 +78,7 @@ export async function fetchLeaderboard() {
         level.records.forEach((record) => {
             const user = Object.keys(scoreMap).find(
                 (u) => u.toLowerCase() === record.user.toLowerCase(),
-            ) || record.user;
+            )  record.user;
             scoreMap[user] ??= {
                 verified: [],
                 completed: [],
@@ -121,43 +121,8 @@ export async function fetchLeaderboard() {
 
     // Sort by total score
     return [res.sort((a, b) => b.total - a.total), errs];
-}
 
-// --- EXISTING fetchPacks stays unchanged ---
-export async function fetchPacks() {
-    try {
-        const res = await fetch(`${dir}/packs.json`);
-        return await res.json(); // this now includes both packs AND levels inside each pack
-    } catch (err) {
-        console.error("Failed to load packs.json", err);
-        return [];
-    }
-}
 
-// --- NEW: fetchPackLevels function ---
-export async function fetchPackLevels(packName) {
-    try {
-        const packs = await fetchPacks();
-        const pack = packs.find(p => p.name === packName);
-        if (!pack) return [];
-
-        // Fetch each level JSON based on the level names in the pack
-        const levels = await Promise.all(
-            pack.levels.map(async lvl => {
-                try {
-                    const res = await fetch(`${dir}/${lvl.name}.json`);
-                    return await res.json();
-                } catch (err) {
-                    console.error(`Failed to fetch level ${lvl.name}`, err);
-                    return null;
-                }
-            })
-        );
-
-        // Return only successfully fetched levels
-        return levels.filter(lvl => lvl !== null);
-    } catch (err) {
-        console.error("Failed to fetch pack levels", err);
-        return [];
-    }
+    //pack stuff
+    const dir = '/data';
 }
