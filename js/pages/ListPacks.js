@@ -1,4 +1,4 @@
-import { fetchPacks, fetchPackLevels, fetchList } from "../content.js";
+import { fetchPacks, fetchList } from "../content.js"; // Removed fetchPackLevels
 import { embed } from "../util.js";
 import { score } from "../score.js";
 
@@ -54,7 +54,7 @@ export default {
                                 :style="selectedLevel === i ? { background: pack?.colour } : {}"
                             >
                                 <span class="type-label-lg">
-                                    {{ level?.[0]?.level?.name || 'Invalid Level' }}
+                                    {{ level?.level?.name || 'Invalid Level' }}
                                 </span>
                             </button>
                         </td>
@@ -147,7 +147,7 @@ export default {
         },
 
         activeLevel() {
-            return this.selectedPackLevels?.[this.selectedLevel]?.[0]?.level || null;
+            return this.selectedPackLevels?.[this.selectedLevel] || null; // Levels are now directly inside packs
         },
     },
 
@@ -158,8 +158,7 @@ export default {
 
             if (this.packs.length) {
                 this.loadingPack = true;
-                this.selectedPackLevels =
-                    (await fetchPackLevels(this.packs[0].name)) || [];
+                this.selectedPackLevels = this.packs[0].levels || []; // Use levels from pack directly
                 this.loadingPack = false;
             }
         } catch (err) {
@@ -179,8 +178,7 @@ export default {
             this.selectedPackLevels = [];
 
             try {
-                this.selectedPackLevels =
-                    (await fetchPackLevels(this.packs[i].name)) || [];
+                this.selectedPackLevels = this.packs[i].levels || []; // Use levels directly
             } catch (err) {
                 console.error("Failed to load pack:", err);
             } finally {
@@ -189,9 +187,9 @@ export default {
         },
 
         getRank(level) {
-            if (!level?.[0]?.level?.name) return '?';
+            if (!level?.level?.name) return '?';
             const idx = this.list.findIndex(
-                (lvl) => lvl?.[0]?.name === level[0].level.name
+                (lvl) => lvl?.[0]?.name === level.level.name
             );
             return idx === -1 ? '?' : idx + 1;
         },
@@ -200,3 +198,4 @@ export default {
         embed,
     },
 };
+
