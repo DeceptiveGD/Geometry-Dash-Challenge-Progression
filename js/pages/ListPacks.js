@@ -1,4 +1,4 @@
-import { fetchPacks, fetchList } from "../content.js"; // Removed fetchPackLevels
+import { fetchPacks, fetchList, fetchPackLevels } from "../content.js"; // Removed fetchPackLevels
 import { embed } from "../util.js";
 import { score } from "../score.js";
 
@@ -198,4 +198,5 @@ export default {
         embed,
     },
 };
+
 
