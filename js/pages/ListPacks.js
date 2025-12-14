@@ -1,4 +1,4 @@
-import { fetchPacks, fetchList, fetchPackLevels } from "../content.js"; // Removed fetchPackLevels
+import { fetchPacks, fetchList } from "../content.js"; // Removed fetchPackLevels
 import { embed } from "../util.js";
 import { score } from "../score.js";
 
@@ -54,7 +54,7 @@ export default {
                                 :style="selectedLevel === i ? { background: pack?.colour } : {}"
                             >
                                 <span class="type-label-lg">
-                                    {{ level?.level?.name || 'Invalid Level' }}
+                                    {{ level?.[0]?.level?.name || 'Invalid Level' }}
                                 </span>
                             </button>
                         </td>
@@ -147,7 +147,7 @@ export default {
         },
 
         activeLevel() {
-            return this.selectedPackLevels?.[this.selectedLevel] || null; // Levels are now directly inside packs
+            return this.selectedPackLevels?.[this.selectedLevel]?.[0]?.level || null;
         },
     },
 
@@ -158,7 +158,9 @@ export default {
 
             if (this.packs.length) {
                 this.loadingPack = true;
-                this.selectedPackLevels = this.packs[0].levels || []; // Use levels from pack directly
+                // Map levels into the structure ListPacks.js expects
+                this.selectedPackLevels =
+                    (this.packs[0].levels || []).map(lvl => [ { level: lvl } ]);
                 this.loadingPack = false;
             }
         } catch (err) {
@@ -178,7 +180,9 @@ export default {
             this.selectedPackLevels = [];
 
             try {
-                this.selectedPackLevels = this.packs[i].levels || []; // Use levels directly
+                // Map levels for the selected pack
+                this.selectedPackLevels =
+                    (this.packs[i].levels || []).map(lvl => [ { level: lvl } ]);
             } catch (err) {
                 console.error("Failed to load pack:", err);
             } finally {
@@ -187,9 +191,9 @@ export default {
         },
 
         getRank(level) {
-            if (!level?.level?.name) return '?';
+            if (!level?.[0]?.level?.name) return '?';
             const idx = this.list.findIndex(
-                (lvl) => lvl?.[0]?.name === level.level.name
+                (lvl) => lvl?.[0]?.name === level[0].level.name
             );
             return idx === -1 ? '?' : idx + 1;
         },
