@@ -1,4 +1,4 @@
-import { fetchPacks, fetchList } from "../content.js";
+import { fetchPacks, fetchPackLevels, fetchList } from "../content.js";
 import { embed } from "../util.js";
 import { score } from "../score.js";
 
@@ -94,7 +94,7 @@ export default {
                                 </p>
                             </td>
                             <td class="user">
-                                <a :href="record.link" target="_blank" class="type-label-lg">
+                                <a :href="record.link || '#'" target="_blank" class="type-label-lg">
                                     {{ record.user }}
                                 </a>
                             </td>
@@ -141,7 +141,7 @@ export default {
 
             if (this.packs.length) {
                 this.loadingPack = true;
-                this.selectedPackLevels = this.packs[0].levels || [];
+                this.selectedPackLevels = await fetchPackLevels(this.packs[0].name);
                 this.loadingPack = false;
             }
         } catch (err) {
@@ -161,7 +161,7 @@ export default {
             this.selectedPackLevels = [];
 
             try {
-                this.selectedPackLevels = this.packs[i].levels || [];
+                this.selectedPackLevels = await fetchPackLevels(this.packs[i].name);
             } catch (err) {
                 console.error("Failed to load pack:", err);
             } finally {
@@ -179,6 +179,3 @@ export default {
         embed,
     },
 };
-
-
-
