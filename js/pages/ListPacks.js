@@ -149,3 +149,4 @@ export default {
         score,
         embed,
     },
+}
