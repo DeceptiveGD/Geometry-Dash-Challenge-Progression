@@ -7,6 +7,11 @@
     "verification": "https://youtu.be/SScLxclMvX8",
     "percentToQualify": 100,
     "password": "free",
-    "records": [
+    "records": [,
+        {
+            "user": "Hellofriendevan",
+            "hz": 120,
+            "percent": 100
+        }
     ]
 }
