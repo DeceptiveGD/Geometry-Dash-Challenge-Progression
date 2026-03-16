@@ -12,6 +12,11 @@
             "user": "noob",
             "hz": 480,
             "percent": 100
+        },
+        {
+            "user": "Lumanyx",
+            "hz": 240,
+            "percent": 100
         }
     ]
 }
