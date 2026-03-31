@@ -10,7 +10,12 @@
     "records": [
         {
             "user": "tFluffy",
-            "hz": 240,
+            "hz": 60,
+            "percent": 100
+        },
+        {
+            "user": "Hellofriendevan",
+            "hz": 60,
             "percent": 100
         }
     ]
