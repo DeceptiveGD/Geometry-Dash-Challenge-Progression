@@ -8,6 +8,11 @@
     "percentToQualify": 100,
     "password": "free",
     "records": [
+        {
+            "user": "UBER GOOBER",
+            "hz": 240,
+            "percent": 100
+        }
        
     ]
 }
