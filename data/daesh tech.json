@@ -1,6 +1,6 @@
 {
     "id": 140132692,
-    "name": "deash tech",
+    "name": "daesh tech",
     "author": "wik",
     "creators": ["wik"],
     "verifier": "wik",
@@ -8,5 +8,10 @@
     "percentToQualify": 100,
     "password": "free",
     "records": [
+        {
+            "user": "Hellofriendevan",
+            "hz": 240,
+            "percent": 100
+        }
     ]
 }
