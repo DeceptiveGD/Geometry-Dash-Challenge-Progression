@@ -22,7 +22,13 @@
             "user": "PoweredByTexans",
             "hz": 240,
             "percent": 100
+        },
+        {
+            "user": "bizzare",
+            "hz": 240,
+            "percent": 100
         }
+        
        
     ]
 }
