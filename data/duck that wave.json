@@ -42,6 +42,11 @@
             "user": "bizzare",
             "hz": 240,
             "percent": 100
+        },
+        {
+            "user": "Quantum",
+            "hz": 90,
+            "percent": 100
         }
     ]
 }
