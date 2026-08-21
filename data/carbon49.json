@@ -32,6 +32,11 @@
             "user": "Quantum",
             "hz": 90,
             "percent": 100
+        },
+        {
+            "user": "MyniwGuels",
+            "hz": 144,
+            "percent": 100
         }
     ]
 }
