@@ -22,14 +22,19 @@
         "accountID": 23071379
     },
     {
-        "role": "helper",
-        "name": "Allu",
-        "accountID": 24309285
+        "role": "admin",
+        "name": "Tsa",
+        "accountID": 25169760
+    },
+    {
+        "role": "admin",
+        "name": "Hellofriendevan",
+        "accountID", 25022296
     },
     {
         "role": "helper",
-        "name": "Tsa",
-        "accountID": 25169760
+        "name": "Allu",
+        "accountID": 24309285
     },
     {
         "role": "helper",
@@ -38,14 +43,8 @@
     },
     {
         "role": "helper",
-        "name": "silenceglobally",
-        "accountID": 29642529,
-        "link": "https://www.youtube.com/@agathxgd"
-    },
-    {
-        "role": "helper",
-        "name": "Voiddle",
-        "accountID": 19326869
+        "name": "Blurmbog",
+        "accountID": 27035549
     },
     {
         "role": "dev",
