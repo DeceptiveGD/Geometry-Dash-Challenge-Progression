@@ -42,6 +42,11 @@
             "user": "arielus05",
             "hz": "144",
             "percent": 100
+        },
+        {
+            "user": "Krusevac",
+            "hz": 240,
+            "percent": 100
         }
         
     ]
