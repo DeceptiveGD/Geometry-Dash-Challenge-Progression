@@ -8,6 +8,8 @@
     "percentToQualify": 100,
     "password": "free",
     "records": [
-        "larp data": "no ones beating this lmaoooo :joy: :joy: :joy:"
+        {
+            "larp data": "no ones beating this lmaoooo :joy: :joy: :joy:"
+        }
     ]
 }
